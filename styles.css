@@ -1,0 +1,173 @@
+body {
+    background-color: #DFD9E2;
+    color: #7D5BA6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #037a70;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #DFD9E2;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #DFD9E2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #7D5BA6;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+h2 {
+    color: #037a70;
+    text-align: center;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #7D5BA6;
+    margin: 2rem 0;
+}
+
+#me {
+    text-align: center;
+}
+
+#me img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#about .text-content {
+    flex: 1;
+}
+
+#about .image-content {
+    flex: 0 0 500px;
+    perspective: 1000px;
+}
+
+#about img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about img:hover {
+    transform: translateZ(20px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-grid,
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item,
+.project-item {
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #DFD9E2;
+    border: 1px solid #7D5BA6;
+}
+
+.project-item h3 {
+    color: #30D5C8;
+}
+
+.project-item a {
+    color: #7D5BA6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-item a:hover {
+    color: #037a70;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #037a70;
+    color: #DFD9E2;
+}
+
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+    }
+    #about .image-content {
+        width: 100%;
+    }
+    #about img {
+        height: auto;
+    }
+    #about img:hover {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
